@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Set Night</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.hero{
+    height:100svh;
+    background:url('https://images.unsplash.com/photo-1580843634936-47eaa02462e4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGolMjBjb25zb2xlfGVufDB8fDB8fHww') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.5);
+    position:absolute;
+    inset:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.menu a{
+    color:#ffffff;
+    text-decoration:none;
+    margin:0 15px;
+    border:1px solid #ffffff;
+    padding:10px 20px;
+    transition:0.3s;
+    border-radius:10px;
+
+    box-shadow:
+        0 0 5px #ff0000,
+        0 0 15px #ae00ff;
+}
+
+.menu a:hover{
+    background:#ffffff;
+    color:black;
+
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 30px #ae00ff;
+}
+
+body{
+    background:#000;
+    color:white;
+}
+
+section{
+    padding:80px 30px;
+    max-width:1000px;
+    margin:60px auto;
+
+    background:#0a0a0a;
+
+    border:2px solid #ffffff;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ae00ff,
+        0 0 40px rgb(255, 255, 255);
+
+    position:relative;
+
+    transition:0.3s;
+}
+
+section:hover{
+    transform:scale(1.02);
+}
+
+section h2{
+    font-size:40px;
+    margin-bottom:25px;
+    color:#ffffff;
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 15px #ffffff;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:400px;
+}
+
+input, button{
+    padding:15px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    background:linear-gradient(90deg,#ff0000,#ae00ff);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    padding:18px;
+
+    border:none;
+    border-radius:12px;
+
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ae00ff,
+        0 0 40px rgba(255,255,255,0.5);
+
+    transition:0.3s;
+}
+button:hover{
+    transform:scale(1.07);
+
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #ae00ff,
+        0 0 60px white;
+}
+#signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .menu{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        margin-top:20px;
+    }
+
+    .menu a{
+        margin:0;
+        padding:12px;
+        font-size:16px;
+    }
+
+    section{
+        margin:30px 15px;
+        padding:40px 20px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    input, button{
+        font-size:16px;
+        padding:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>DJ SET NIGHT</h1>
+        <p>24 Giugno 2026 • Padova</p>
+
+        <div class="menu">
+            <a href="#info">Info</a>
+            <a href="#location">Location</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#signup">Sign Up</a>
+        </div>
+    </div>
+</div>
+
+<section id="info">
+    <h2>Info</h2>
+    <p>
+        "Lo facciamo per voi",<br>
+        una notte di festa casereccia a ritmo di musica e divertimento,<br>
+        approfittate dell <b style="color:#ff0000; text-shadow:0 0 10px #ff0000;">OPENBAR</b> per un'esperienza totale.<br>
+        Il parcheggio è privato e riservato solo agli ospiti,<br>
+        disponibile sia il prato che il porticato per poter ballare.
+    </p>
+</section>
+
+<section id="location">
+    <h2>Location</h2>
+
+    <p style="margin-top:15px; font-size:20px;">
+        Padova • Via Vegri 32
+    </p>
+
+    <div style="
+        margin-top:30px;
+        border-radius:20px;
+        overflow:hidden;
+        box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    ">
+        <iframe
+            src="https://www.google.com/maps?q=Via+Vegri+32+Padova&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Community</h2>
+
+    <p style="margin-top:20px; font-size:20px;">
+        Entra nel nostro gruppo WhatsApp per le foto dell’evento
+    </p>
+
+    <a 
+       href="https://chat.whatsapp.com/LiuvoWp4ZMU3mVk4b3fE1k?mode=gi_t" 
+       target="_blank"
+       rel="noopener noreferrer"
+       style="
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 30px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-size:18px;
+       ">
+       Entra nel gruppo WhatsApp
+    </a>
+</section>
+
+<section id="signup">
+    <h2>Sign Up</h2>
+
+    <form id="signupForm">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cognome" placeholder="Cognome" required>
+        <button type="submit">Invia</button>
+    </form>
+</section>
+
+<script>
+const form = document.getElementById("signupForm");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbwXP6IZZGVo4my-FQGWcwLrwVldi1V1gI2xp0J3JIBbqwmDPNs1c4xRH9GF8Kl6Wpbk/exec", {
+        method: "POST",
+        body: data
+    })
+    .then(response => response.text())
+    .then(() => {
+        alert("Registrazione inviata!");
+        form.reset();
+    })
+    .catch(() => alert("Errore"));
+});
+</script>
+</body>
+</html>
